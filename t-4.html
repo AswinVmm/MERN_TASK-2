@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-4</title>
+    <style>
+        form {
+            margin-left: 700px;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function date() {
+            var day, date, month, year;
+            day = new Date();
+            date = day.getDate();
+            month = day.getMonth();
+            year = day.getFullYear();
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            document.getElementById("result1").innerHTML = date + "/" + months[month] + "/" + year;
+        }
+
+        function Time() {
+            var day, date, month, year;
+            day = new Date();
+            document.getElementById("result2").innerHTML = day;
+        }
+    </script>
+    <form name="myform">
+        <input type="button" value="show date" onclick="date()">
+        <p id="result1"></p><br>
+        <input type="button" value="show Time" onclick="Time()">
+        <p id="result2"></p><br>
+
+    </form>
+
+</body>
+
+</html>
